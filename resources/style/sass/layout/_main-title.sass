@@ -1,0 +1,35 @@
+#main-title
+    background:
+        color: $themeColorFourHex
+    height: 100%
+    align-items: center
+    color: $themeColorOneHex
+    
+    h1
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        animation-name: slideFromLeftToRight
+        animation-duration: 1s
+        animation-timing-function: ease-out
+        @include formatTextline($themeColorFiveHex, right, 0 1rem, 5.5rem, normal)
+    h3
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        animation-name: slideFromRightToLeft
+        animation-delay: 1s
+        animation-duration: 1s
+        animation-timing-function: ease-out
+        @include formatTextline($themeColorFiveHex, right, 0 1rem, 1.75rem, normal)
+    .row
+        height: 100%
+
+@mixin mainTitleSmallScreen()
+    #main-title
+        h1
+            font-size: 3rem
+            padding: 0 0.5rem
+        h3
+            font-size: 1.3rem
+            padding: 0 0.5rem

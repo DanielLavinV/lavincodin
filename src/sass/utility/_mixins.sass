@@ -1,0 +1,29 @@
+@use "sass:list"
+
+@mixin formatTextline($bgColor, $txtAl, $pad, $fontSize, $fontWght)
+    background:
+        color: $bgColor
+    padding: $pad
+    text-align: $txtAl
+    font:
+        size: $fontSize
+        weight: $fontWght
+
+@mixin setAnimationAndOrder($animation, $initialDelay, $elements, $durations, $separationFactor)
+    // $animation - name of animation to use for $elements
+    // $initialDelay - time to wait until $elements start their animation
+    // $elements - elements to animate
+    // $durations - duration of the animation of each element
+    // $separationFactor -
+        // 0 -> start together with previous (all at the same time)
+        // 0.5 -> start when previous animation is at 50%
+        // 1 -> start when previous ends
+    $previousDuration: 0
+    @each $ele in $elements
+        #{$ele}
+            animation-name: $animation
+            animation-delay: $initialDelay + $previousDuration * $separationFactor
+            animation-duration: list.nth($durations, list.index($elements, $ele))
+        $previousDuration: list.nth($durations, list.index($elements, $ele))
+
+        

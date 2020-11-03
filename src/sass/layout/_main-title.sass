@@ -6,15 +6,17 @@
     color: $themeColorOneHex
     
     h1
-        display: flex
-        flex-direction: row
-        justify-content: flex-start
-        @include formatTextline($themeColorFiveHex, right, 0 1rem, 5.5rem, normal)
+        // display: flex
+        // flex-direction: row
+        // justify-content: flex-start
+        display: inline
+        @include formatTextline($themeColorFiveHex, left, 0, 0 0 0.4rem, 5.5rem, normal, -1rem)
     h3
-        display: flex
-        flex-direction: row
-        justify-content: flex-end
-        @include formatTextline($themeColorFiveHex, right, 0 1rem, 1.75rem, normal)
+        // display: flex
+        // flex-direction: row
+        // justify-content: flex-end
+        display: inline
+        @include formatTextline($themeColorFiveHex, right, 0, 0 0 0.4rem, 1.75rem, normal, 1rem)
     .row
         height: 100%
 

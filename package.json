@@ -2,10 +2,10 @@
   "name": "lavincodin",
   "version": "1.0.0",
   "description": "portfolio page",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.0",
     "file-loader": "^6.2.0",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.2.1",
     "sass": "^1.28.0",
     "sass-loader": "^10.0.5",

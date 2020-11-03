@@ -1,13 +1,15 @@
 @use "sass:list"
 
-@mixin formatTextline($bgColor, $txtAl, $pad, $fontSize, $fontWght)
+@mixin formatTextline($bgColor, $txtAl, $pad, $mar, $fontSize, $fontWght,$bxShdowPad)
     background:
         color: $bgColor
     padding: $pad
+    margin: $mar
     text-align: $txtAl
     font:
         size: $fontSize
         weight: $fontWght
+    box-shadow: $bxShdowPad 0 0 $bgColor
 
 @mixin setAnimationAndOrder($animation, $initialDelay, $elements, $durations, $separationFactor)
     // $animation - name of animation to use for $elements

@@ -25,22 +25,22 @@ body {
 #main-title h1 {
   display: inline;
   background-color: #253237ff;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0 0 0.4rem;
   text-align: left;
   font-size: 5.5rem;
   font-weight: normal;
-  box-shadow: -1rem 0 0 #253237ff;
+  box-shadow: 0 0 0 #253237ff;
 }
 #main-title h3 {
   display: inline;
   background-color: #253237ff;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0 0 0.4rem;
   text-align: right;
   font-size: 1.75rem;
   font-weight: normal;
-  box-shadow: 1rem 0 0 #253237ff;
+  box-shadow: 0 0 0 #253237ff;
 }
 #main-title .row {
   height: 100%;
@@ -68,21 +68,21 @@ body {
 }
 #about-me h3 {
   background-color: #c2dfe3ff;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0 0 0.4rem;
   text-align: left;
   font-size: 1.75rem;
   font-weight: 600;
-  box-shadow: -1rem 0 0 #c2dfe3ff;
+  box-shadow: 0 0 0 #c2dfe3ff;
 }
 #about-me p {
   background-color: #c2dfe3ff;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0 0 0.4rem;
   text-align: right;
   font-size: 1rem;
   font-weight: normal;
-  box-shadow: 1rem 0 0 #c2dfe3ff;
+  box-shadow: 0 0 0 #c2dfe3ff;
 }
 #about-me img {
   width: 100%;
@@ -94,7 +94,6 @@ body {
 #about-me .img-container {
   margin: 0 0 10px;
   background-color: #c2dfe3ff;
-  box-shadow: -1rem 0 0 #c2dfe3ff;
 }
 
 #portfolio {
@@ -102,12 +101,12 @@ body {
 }
 #portfolio h3 {
   background-color: #253237ff;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0 0 0.4rem;
   text-align: right;
   font-size: 1.75rem;
   font-weight: 600;
-  box-shadow: 1rem 0 0 #253237ff;
+  box-shadow: 0 0 0 #253237ff;
 }
 #portfolio .react-container .row {
   display: flex;
@@ -129,30 +128,64 @@ body {
 
 .project-card {
   width: 100%;
+  background-color: #5c6b73ff;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
 }
 .project-card .card-text {
+  height: 5rem;
+  overflow: scroll;
   background-color: #253237ff;
-  padding: 0.5rem 0;
-  margin: inherit;
+  padding: 0 1rem;
+  margin: 0.3rem 0;
   text-align: left;
   font-size: 1rem;
-  font-weight: 300;
-  box-shadow: 0.5rem 0 0 #253237ff;
+  font-weight: normal;
+  box-shadow: 0 0 0 #253237ff;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.project-card .card-img-overlay {
+.project-card .card-text::-webkit-scrollbar {
+  display: none;
+}
+.project-card .img-overlay-container {
+  position: relative;
+}
+.project-card .img-overlay-container h5 {
+  position: absolute;
+  padding: 0;
   text-align: center;
-  top: 20%;
+  top: 50%;
   bottom: unset;
-  left: 0;
-  right: 0;
+  right: unset;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #253237ff;
+  padding: 0 1rem;
+  margin: 0.3rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  box-shadow: 0 0 0 #253237ff;
 }
-.project-card img {
+.project-card .img-overlay-container img {
+  z-index: 1;
   transform: scale(1.05);
   filter: blur(3px) opacity(0.7);
   -o-filter: blur(3px) opacity(0.7);
   -ms-filter: blur(3px) opacity(0.7);
   -moz-filter: blur(3px) opacity(0.7);
   -webkit-filter: blur(3px) opacity(0.7);
+}
+.project-card .btn {
+  margin-top: 0.2rem;
+  background-color: ghostwhite;
+  color: #253237ff;
+  border: none;
+}
+.project-card .btn:hover {
+  background-color: #9db4c0ff;
 }
 
 @media (max-width: 576px) {

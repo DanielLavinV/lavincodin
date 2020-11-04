@@ -14,12 +14,10 @@ class ProjectCard extends React.Component {
   render() {
     return (
       <Card className="project-card">
-        <div style={{overflow: "hidden"}}>
-          <Card.Img variant="top" src={this.props.src} />
+        <div className="img-overlay-container" style={{overflow: "hidden"}}>
+        <Card.Img variant="top" src={this.props.src} />
+        <h5>{this.props.cardTitle}</h5>
         </div>
-        <Card.ImgOverlay>
-          <Card.Title>{this.props.cardTitle}</Card.Title>
-        </Card.ImgOverlay>
         <Card.Body>
           <Card.Text>{this.props.cardText}</Card.Text>
           <Button variant="primary" href={this.props.href} target="_blank">Check it out!</Button>
@@ -43,7 +41,7 @@ class ProjectCardContainer extends React.Component {
       output.push(
         <Col sm={12} 
         md={this.props.content.length < 3 ? 
-          3 : Math.floor(12/this.props.content.length)}>
+          4 : Math.floor(12/this.props.content.length)}>
           <ProjectCard
             src={child.img}
             cardTitle={child.cardTitle}

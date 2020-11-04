@@ -28,4 +28,12 @@
             animation-duration: list.nth($durations, list.index($elements, $ele))
         $previousDuration: list.nth($durations, list.index($elements, $ele))
 
-        
+@mixin boxShadow($boxshadow)
+    -webkit-box-shadow: $boxshadow
+    box-shadow: $boxshadow
+
+@mixin hideScrollbars()
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        display: none

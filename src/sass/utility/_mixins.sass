@@ -1,13 +1,25 @@
 @use "sass:list"
 
+<<<<<<< HEAD
 @mixin formatTextline($bgColor, $txtAl, $pad, $fontSize, $fontWght)
     background:
         color: $bgColor
     padding: $pad
+=======
+@mixin formatTextline($bgColor, $txtAl, $pad, $mar, $fontSize, $fontWght,$bxShdowPad)
+    background:
+        color: $bgColor
+    padding: $pad
+    margin: $mar
+>>>>>>> 3bdbada4e2c5611c866c071bf4df2ba0f325ff06
     text-align: $txtAl
     font:
         size: $fontSize
         weight: $fontWght
+<<<<<<< HEAD
+=======
+    box-shadow: $bxShdowPad 0 0 $bgColor
+>>>>>>> 3bdbada4e2c5611c866c071bf4df2ba0f325ff06
 
 @mixin setAnimationAndOrder($animation, $initialDelay, $elements, $durations, $separationFactor)
     // $animation - name of animation to use for $elements
@@ -26,4 +38,16 @@
             animation-duration: list.nth($durations, list.index($elements, $ele))
         $previousDuration: list.nth($durations, list.index($elements, $ele))
 
+<<<<<<< HEAD
         
+=======
+@mixin boxShadow($boxshadow)
+    -webkit-box-shadow: $boxshadow
+    box-shadow: $boxshadow
+
+@mixin hideScrollbars()
+    -ms-overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+        display: none
+>>>>>>> 3bdbada4e2c5611c866c071bf4df2ba0f325ff06

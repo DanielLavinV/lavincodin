@@ -26,9 +26,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  animation-name: slideFromLeftToRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
   background-color: #253237ff;
   padding: 0 1rem;
   text-align: right;
@@ -39,10 +36,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  animation-name: slideFromRightToLeft;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
   background-color: #253237ff;
   padding: 0 1rem;
   text-align: right;
@@ -122,6 +115,7 @@ body {
 }
 @keyframes slideFromLeftToRight {
   from {
+    display: none;
     transform: translate(-200%, 0%);
   }
   to {
@@ -133,6 +127,7 @@ body {
     transform: translate(200%, 0%);
   }
   to {
+    display: block;
     transform: translate(0%, 0%);
   }
 }

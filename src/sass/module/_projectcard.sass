@@ -1,0 +1,38 @@
+.project-card
+    width: 100%
+    background-color: $themeColorFourHex
+    @include boxShadow(0px 3px 5px 0px rgba(0,0,0,0.8))
+    
+    .card-text
+        height: 5rem
+        overflow: scroll
+        @include formatTextline($themeColorFiveHex,left,0 1rem, 0.3rem 0,1rem, normal, 0)
+        @include hideScrollbars()
+    .img-overlay-container
+        position: relative
+        h5
+            position: absolute
+            padding: 0
+            text-align: center
+            top: 50%
+            bottom: unset
+            right: unset
+            left: 50%
+            transform: translate(-50%,-50%)
+            z-index: 2
+            @include formatTextline($themeColorFiveHex, center, 0 1rem, 0.3rem 0, 1.5rem, normal, 0)
+        img
+            z-index: 1
+            transform: scale(1.05)
+            filter: blur(3px) opacity(.7)
+            -o-filter: blur(3px) opacity(.7)
+            -ms-filter: blur(3px) opacity(.7)
+            -moz-filter: blur(3px) opacity(.7)
+            -webkit-filter: blur(3px) opacity(.7)
+    .btn
+        margin-top: 0.2rem
+        background-color: $themeColorOneHex
+        color: $themeColorFiveHex
+        border: none
+        &:hover
+            background-color: $themeColorThreeHex
